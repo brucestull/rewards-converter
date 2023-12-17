@@ -23,7 +23,7 @@ public class RewardValueTests {
     void convert_from_cash_to_miles() {
         double cashValue = 100;
         var rewardValue = new RewardValue(cashValue);
-        double expectedMilesValue = Math.round(cashValue / .0035 * 100.0f) / 100.0f;
+        double expectedMilesValue = Math.round(cashValue / .0035);
         // epsilon of 0.01 is set for floating point comparison
         assertTrue(Math.abs(expectedMilesValue - rewardValue.getMilesValue()) < 0.01);
     }
