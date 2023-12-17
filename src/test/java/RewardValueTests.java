@@ -6,21 +6,21 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class RewardValueTests {
 
     @Test
-    void create_with_cash_value() {
+    void createWithCashValue() {
         double cashValue = 100;
         var rewardValue = new RewardValue(cashValue);
         assertEquals(cashValue, rewardValue.getCashValue(), 0.01);
     }
 
     @Test
-    void create_with_miles_value() {
+    void createWithMilesValue() {
         int milesValue = 10000;
         var rewardValue = new RewardValue(milesValue);
         assertEquals(milesValue, rewardValue.getMilesValue());
     }
 
     @Test
-    void convert_from_cash_to_miles() {
+    void convertFromCashToMiles() {
         double cashValue = 100;
         var rewardValue = new RewardValue(cashValue);
         double expectedMilesValue = Math.round(cashValue / .0035);
@@ -29,7 +29,7 @@ public class RewardValueTests {
     }
 
     @Test
-    void convert_from_miles_to_cash() {
+    void convertFromMilesToCash() {
         int milesValue = 10000;
         var rewardValue = new RewardValue(milesValue);
         double expectedCashValue = milesValue * .0035;
