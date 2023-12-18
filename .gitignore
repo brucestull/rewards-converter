@@ -1,3 +1,4 @@
 localThings
+*.class
 .idea/
 target/
